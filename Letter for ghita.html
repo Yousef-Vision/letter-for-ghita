@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Letter for Ghita</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.squarespace-cdn.com/content/v1/5d7b921aa20ea468a889fb20/1568380637229-SRGLRTAEGENF0GNF2QL2/MHWLac7a.gif') repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Georgia', serif;
+    }
+    .envelope {
+      width: 480px;
+      height: 300px;
+      background: url('file:///C:/Users/youse/Pictures/Screenshots/Screenshot%202025-04-17%20142734.png') no-repeat center center;
+      background-size: cover;
+      border: 3px solid #aa8a30;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+      overflow: hidden;
+    }
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(179, 128, 34, 0.76);
+      clip-path: polygon(0 0, 100% 0, 50% 50%);
+      transition: top 0.5s ease;
+      z-index: 2;
+    }
+    .content {
+      display: none;
+      padding: 35px 25px;
+      text-align: center;
+      color: #3e2c2c;
+      font-size: 1.2rem;
+      background-color: rgba(255, 250, 240, 0.541);
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px #abc060;
+      position: relative;
+      z-index: 1;
+    }
+    .open .flap {
+      top: -100%;
+    }
+    .open .content {
+      display: block;
+    }
+    h1 {
+      font-size: 1.7rem;
+      color: #9e6315;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope" onclick="this.classList.toggle('open')">
+    <div class="flap"></div>
+    <div class="content">
+      <h1>My Dearest Ghita,</h1>
+      <p>
+        From the moment you smiled, my world shifted into a beautiful dream. You are my sunshine on rainy days,
+        the calm in my chaos, and the joy in my heart. I’ll always love you with every beat of my soul.
+      </p>
+      <p>Forever yours,<br/>Yousef</p>
+    </div>
+  </div>
+</body>
+</html>
